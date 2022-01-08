@@ -10,7 +10,7 @@
             "request": "launch",
             "preLaunchTask": "build",
             "program": "${workspaceFolder}/bin/Debug/net6.0/AdventOfCode.dll",
-            "args": ["0"],
+            "args": ["${input:problemNum}"],
             "cwd": "${workspaceFolder}",
             "console": "internalConsole",
             "stopAtEntry": false
@@ -20,5 +20,12 @@
             "type": "coreclr",
             "request": "attach"
         }
+    ],
+    "inputs": [
+        {
+            "id": "problemNum",
+            "description": "Problem:",
+            "type": "promptString"
+        },
     ]
 }
