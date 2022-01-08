@@ -2,13 +2,16 @@
 Advent of Code Solutions
 
 Potential language choices:
-* F#
-* Python
-* Ruby
-* TypeScript (inside Angular?)
-* PHP
-* Java
-* Go
+* 2015 - C#
+* 2016 - Python 3
+* 2017 - Rust
+* 2018 - TypeScript (inside Angular?)
+* 2019 - Kotlin
+* 2020 - F#
+* 2021 - Go
+* 2022 - Haskell
+* 2023 - Ruby
+* 2024 - PHP
 
 ## Getting Started
 
