@@ -4,7 +4,7 @@ public class P02 : Problem
 {
     public P02(string[] input) : base(input)
     {
-        foreach (var line in _input)
+        foreach (var line in input)
         {
             var box = new Box(line);
             Answer1 += box.SurfaceAreaPlus();

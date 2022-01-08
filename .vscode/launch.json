@@ -9,7 +9,7 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/bin/Debug/net6.0/AdventOfCode.dll",
+            "program": "${workspaceFolder}/AdventOfCode/bin/Debug/net6.0/AdventOfCode.dll",
             "args": ["${input:problemNum}"],
             "cwd": "${workspaceFolder}",
             "console": "internalConsole",
