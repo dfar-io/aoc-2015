@@ -6,7 +6,9 @@ public class P02 : Problem
     {
         foreach (var line in _input)
         {
-            Answer1 += new Box(line).SurfaceAreaPlus();
+            var box = new Box(line);
+            Answer1 += box.SurfaceAreaPlus();
+            Answer2 += box.Ribbon();
         }
     }
 }

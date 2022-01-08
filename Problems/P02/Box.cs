@@ -2,9 +2,13 @@ namespace AdventOfCode.Problems.P02;
 
 public class Box
 {
-    public int Length { get; init; }
-    public int Width { get; init; }
-    public int Height { get; init; }
+    private int Length { get; init; }
+    private int Width { get; init; }
+    private int Height { get; init; }
+
+    private int Area1 => Length * Width;
+    private int Area2 => Width * Height;
+    private int Area3 => Height * Length;
 
     public Box(string input)
     {
@@ -17,16 +21,33 @@ public class Box
 
     public int SurfaceAreaPlus()
     {
-        var surfaceArea1 = Length * Width;
-        var surfaceArea2 = Width * Height;
-        var surfaceArea3 = Height * Length;
+        return 2 * Area1 +
+               2 * Area2 +
+               2 * Area3 + 
+               SmallestArea();
+    }
 
-        return 2 * surfaceArea1 +
-               2 * surfaceArea2 +
-               2 * surfaceArea3 + 
-               Math.Min(
-                surfaceArea1,
-                Math.Min(surfaceArea2, surfaceArea3)
+    public int Ribbon()
+    {
+        var volume = Length * Width * Height;
+        return SmallestPerimeter() + volume;
+    }
+
+    
+
+    private int SmallestArea()
+    {
+        return Math.Min(
+                Area1,
+                Math.Min(Area2, Area3)
                );
+    }
+
+    private int SmallestPerimeter()
+    {
+        var dimensions = new int[] { Length, Width, Height };
+        var values = dimensions.OrderBy(i => i).Take(2).ToArray();
+
+        return values[0] * 2 + values[1] * 2;
     }
 }
