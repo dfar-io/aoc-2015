@@ -1,5 +1,8 @@
-# advent-of-code
-Advent of Code Solutions
+[![Maintainability](https://api.codeclimate.com/v1/badges/350c60de4bea8f568056/maintainability)](https://codeclimate.com/github/dfar-io/aoc-2015/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/350c60de4bea8f568056/test_coverage)](https://codeclimate.com/github/dfar-io/aoc-2015/test_coverage)
+
+# aoc-2015
+Advent of Code 2015 Solutions
 
 Potential language choices:
 * 2015 - C#
