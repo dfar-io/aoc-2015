@@ -20,4 +20,12 @@ public class P01Tests
     {
         new P01(input).Answer1.Should().Be(answer);
     }
+
+    [Test]
+    [TestCase(")", 1)]
+    [TestCase("()())", 5)]
+    public void P01P2_Works(string input, int answer)
+    {
+        new P01(input).Answer2.Should().Be(answer);
+    }
 }
