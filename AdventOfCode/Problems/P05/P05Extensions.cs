@@ -26,17 +26,12 @@ public static class P05Extensions
 
         for (int i = 0; i < value.Length; i++)
         {
-            var pair = i < value.Length - 1 ?
-                $"{value[i]}{value[i+1]}" :
-                string.Empty;
-            // Only need to check if it doesn't already include a repeating letter
-            containsRepeatingLetter = !containsRepeatingLetter && i < value.Length - 2 ?
-                value[i] == value[i+2] :
-                containsRepeatingLetter;
-                
+            string pair = DeterminePair(value, i);
+            containsRepeatingLetter = ContainsRepeatingLetter(value, containsRepeatingLetter, i);
+
             for (int j = i + 2; j < value.Length - 1; j++)
             {
-                var secondPair = $"{value[j]}{value[j+1]}";
+                var secondPair = $"{value[j]}{value[j + 1]}";
                 if (pair == secondPair)
                 {
                     containsPair = true;
@@ -46,5 +41,19 @@ public static class P05Extensions
         }
 
         return containsPair && containsRepeatingLetter;
+    }
+
+    private static bool ContainsRepeatingLetter(string value, bool containsRepeatingLetter, int i)
+    {
+        return !containsRepeatingLetter && i < value.Length - 2 ?
+                        value[i] == value[i + 2] :
+                        containsRepeatingLetter;
+    }
+
+    private static string DeterminePair(string value, int i)
+    {
+        return i < value.Length - 1 ?
+                        $"{value[i]}{value[i + 1]}" :
+                        string.Empty;
     }
 }
