@@ -179,15 +179,15 @@ The `AdventOfCode.Tests` namespace contains 6 named types.
 
 <div id='adventofcode'></div>
 
-## AdventOfCode :warning:
+## AdventOfCode :heavy_check_mark:
 
 The *AdventOfCode.csproj* project file contains:
 
 - 8 namespaces.
 - 12 named types.
-- 383 total lines of source code.
-- Approximately 125 lines of executable code.
-- The highest cyclomatic complexity is 8 :warning:.
+- 392 total lines of source code.
+- Approximately 127 lines of executable code.
+- The highest cyclomatic complexity is 6 :heavy_check_mark:.
 
 <details>
 <summary>
@@ -428,7 +428,7 @@ The `AdventOfCode.Problems.P04` namespace contains 1 named types.
 <details>
 <summary>
   <strong id="adventofcode-problems-p05">
-    AdventOfCode.Problems.P05 :warning:
+    AdventOfCode.Problems.P05 :heavy_check_mark:
   </strong>
 </summary>
 <br>
@@ -436,9 +436,9 @@ The `AdventOfCode.Problems.P04` namespace contains 1 named types.
 The `AdventOfCode.Problems.P05` namespace contains 2 named types.
 
 - 2 named types.
-- 60 total lines of source code.
-- Approximately 21 lines of executable code.
-- The highest cyclomatic complexity is 8 :warning:.
+- 69 total lines of source code.
+- Approximately 23 lines of executable code.
+- The highest cyclomatic complexity is 6 :heavy_check_mark:.
 
 <details>
 <summary>
@@ -467,20 +467,22 @@ The `AdventOfCode.Problems.P05` namespace contains 2 named types.
 <details>
 <summary>
   <strong id="p05extensions">
-    P05Extensions :warning:
+    P05Extensions :heavy_check_mark:
   </strong>
 </summary>
 <br>
 
-- The `P05Extensions` contains 2 members.
-- 46 total lines of source code.
-- Approximately 17 lines of executable code.
-- The highest cyclomatic complexity is 8 :warning:.
+- The `P05Extensions` contains 4 members.
+- 55 total lines of source code.
+- Approximately 19 lines of executable code.
+- The highest cyclomatic complexity is 6 :heavy_check_mark:.
 
 | Member kind | Line number | Maintainability index | Cyclomatic complexity | Depth of inheritance | Class coupling | Lines of source / executable code |
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
+| Method | <a href='https://github.com/dfar-io/aoc-2015/blob/main/AdventOfCode/Problems/P05/P05Extensions.cs#L46' title='bool P05Extensions.ContainsRepeatingLetter(string value, bool containsRepeatingLetter, int i)'>46</a> | 87 | 3 :heavy_check_mark: | 0 | 1 | 6 / 1 |
+| Method | <a href='https://github.com/dfar-io/aoc-2015/blob/main/AdventOfCode/Problems/P05/P05Extensions.cs#L53' title='string P05Extensions.DeterminePair(string value, int i)'>53</a> | 89 | 2 :heavy_check_mark: | 0 | 1 | 6 / 1 |
 | Method | <a href='https://github.com/dfar-io/aoc-2015/blob/main/AdventOfCode/Problems/P05/P05Extensions.cs#L7' title='bool P05Extensions.IsNice(string value)'>7</a> | 67 | 6 :heavy_check_mark: | 0 | 1 | 14 / 6 |
-| Method | <a href='https://github.com/dfar-io/aoc-2015/blob/main/AdventOfCode/Problems/P05/P05Extensions.cs#L22' title='bool P05Extensions.IsNiceP2(string value)'>22</a> | 58 | 8 :warning: | 0 | 1 | 28 / 11 |
+| Method | <a href='https://github.com/dfar-io/aoc-2015/blob/main/AdventOfCode/Problems/P05/P05Extensions.cs#L22' title='bool P05Extensions.IsNiceP2(string value)'>22</a> | 60 | 5 :heavy_check_mark: | 0 | 1 | 23 / 11 |
 
 <a href="#P05Extensions-class-diagram">:link: to `P05Extensions` class diagram</a>
 
@@ -812,6 +814,8 @@ classDiagram
 class P05Extensions{
     +IsNice(string value)$ bool
     +IsNiceP2(string value)$ bool
+    +ContainsRepeatingLetter(string value, bool containsRepeatingLetter, int i)$ bool
+    +DeterminePair(string value, int i)$ string
 }
 
 ```
