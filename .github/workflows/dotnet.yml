@@ -32,7 +32,7 @@ jobs:
         owner: ${{ github.repository_owner }}
         name: ${{ github.repository }}
         branch: ${{ github.ref }}
-        dir: ${{ './github-actions/DotNet.GitHubAction' }}
+        dir: ${{ '.' }}
     # Create a pull request if there are changes.
     - name: Create pull request
       uses: peter-evans/create-pull-request@v3.4.1
