@@ -185,8 +185,8 @@ The *AdventOfCode.csproj* project file contains:
 
 - 8 namespaces.
 - 12 named types.
-- 380 total lines of source code.
-- Approximately 124 lines of executable code.
+- 383 total lines of source code.
+- Approximately 125 lines of executable code.
 - The highest cyclomatic complexity is 8 :warning:.
 
 <details>
@@ -344,7 +344,7 @@ The `AdventOfCode.Problems.P02` namespace contains 2 named types.
 <details>
 <summary>
   <strong id="adventofcode-problems-p03">
-    AdventOfCode.Problems.P03 :warning:
+    AdventOfCode.Problems.P03 :heavy_check_mark:
   </strong>
 </summary>
 <br>
@@ -352,27 +352,28 @@ The `AdventOfCode.Problems.P02` namespace contains 2 named types.
 The `AdventOfCode.Problems.P03` namespace contains 1 named types.
 
 - 1 named types.
-- 63 total lines of source code.
-- Approximately 22 lines of executable code.
-- The highest cyclomatic complexity is 8 :warning:.
+- 66 total lines of source code.
+- Approximately 23 lines of executable code.
+- The highest cyclomatic complexity is 5 :heavy_check_mark:.
 
 <details>
 <summary>
   <strong id="p03">
-    P03 :warning:
+    P03 :heavy_check_mark:
   </strong>
 </summary>
 <br>
 
-- The `P03` contains 2 members.
-- 62 total lines of source code.
-- Approximately 22 lines of executable code.
-- The highest cyclomatic complexity is 8 :warning:.
+- The `P03` contains 3 members.
+- 65 total lines of source code.
+- Approximately 23 lines of executable code.
+- The highest cyclomatic complexity is 5 :heavy_check_mark:.
 
 | Member kind | Line number | Maintainability index | Cyclomatic complexity | Depth of inheritance | Class coupling | Lines of source / executable code |
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
 | Method | <a href='https://github.com/dfar-io/aoc-2015/blob/main/AdventOfCode/Problems/P03/P03.cs#L5' title='P03.P03(string input)'>5</a> | 100 | 1 :heavy_check_mark: | 0 | 0 | 1 / 0 |
-| Method | <a href='https://github.com/dfar-io/aoc-2015/blob/main/AdventOfCode/Problems/P03/P03.cs#L7' title='P03.P03(string[] input)'>7</a> | 51 | 8 :warning: | 0 | 4 | 57 / 22 |
+| Method | <a href='https://github.com/dfar-io/aoc-2015/blob/main/AdventOfCode/Problems/P03/P03.cs#L7' title='P03.P03(string[] input)'>7</a> | 53 | 4 :heavy_check_mark: | 0 | 4 | 37 / 22 |
+| Method | <a href='https://github.com/dfar-io/aoc-2015/blob/main/AdventOfCode/Problems/P03/P03.cs#L45' title='void P03.HandleDirection(ref (int x, int y) p1Coords, char direction, ref (int x, int y) p2Coords)'>45</a> | 85 | 5 :heavy_check_mark: | 0 | 2 | 22 / 1 |
 
 <a href="#P03-class-diagram">:link: to `P03` class diagram</a>
 
@@ -770,6 +771,7 @@ classDiagram
 class P03{
     +.ctor(string input) P03
     +.ctor(string[] input) P03
+    +HandleDirection(ref (int x, int y) p1Coords, char direction, ref (int x, int y) p2Coords)$ void
 }
 
 ```

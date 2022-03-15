@@ -33,11 +33,5 @@ jobs:
         name: ${{ github.repository }}
         branch: ${{ github.ref }}
         dir: ${{ '.' }}
-    # Create a pull request if there are changes.
-    - name: Create pull request
-      uses: peter-evans/create-pull-request@v3.4.1
-      if: ${{ steps.dotnet-code-metrics.outputs.updated-metrics }} == 'true'
-      with:
-        title: '${{ steps.dotnet-code-metrics.outputs.summary-title }}'
-        body: '${{ steps.dotnet-code-metrics.outputs.summary-details }}'
-        commit-message: '.NET code metrics, automated pull request.'
+    # Commit if code metrics have changed
+    - uses: stefanzweifel/git-auto-commit-action@v4
